@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  db-pacientes-service:
+    image: postgres:15
+    container_name: gerenciador_de_pacientes_db
+    environment:
+      POSTGRES_DB: gerenciador_de_pacientes
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 123
+    ports:
+      - "5438:5432"
+
+networks:
+  default:
+    driver: bridge
