@@ -25,9 +25,4 @@ public class Medico implements Serializable {
     @Column(name = "especialidade", nullable = false, length = 100)
     private String especialidade;
 
-
-
-
-
-
 }
