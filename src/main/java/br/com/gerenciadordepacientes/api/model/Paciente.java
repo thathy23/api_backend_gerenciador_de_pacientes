@@ -1,11 +1,13 @@
 package br.com.gerenciadordepacientes.api.model;
 
+import br.com.gerenciadordepacientes.api.enums.TipoPacienteEnum;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
+import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "paciente")
@@ -35,5 +37,20 @@ public class Paciente implements Serializable {
 
     @Column(name = "plano_de_saude", nullable = false, length = 100)
     private String plano_de_saude;
+
+    @Column(name = "tipo_paciente", nullable = false)
+    //por padrao particular sera 0 e planodesaude sera 1 no banco de dados, entao
+    @Enumerated(EnumType.STRING) //sera enumerado por string com os nome definidos no enum
+    private TipoPacienteEnum tipoPacienteEnum;
+
+    @Column(name = "criado_em", nullable = false)
+    private LocalDateTime criadoEm;
+
+    @Column(name = "atualizado_em", nullable = false)
+    private LocalDateTime atualizadoEm;
+
+
+
+
 
 }
