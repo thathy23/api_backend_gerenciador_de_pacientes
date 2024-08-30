@@ -36,7 +36,7 @@ public class Paciente implements Serializable {
     private String rg;
 
     @Column(name = "plano_de_saude", nullable = false, length = 100)
-    private String plano_de_saude;
+    private String planoDeSaude;
 
     @Column(name = "tipo_paciente", nullable = false)
     //por padrao particular sera 0 e planodesaude sera 1 no banco de dados, entao
@@ -46,7 +46,7 @@ public class Paciente implements Serializable {
     @Column(name = "criado_em", nullable = false)
     private LocalDateTime criadoEm;
 
-    @Column(name = "atualizado_em", nullable = false)
+    @Column(name = "atualizado_em")
     private LocalDateTime atualizadoEm;
 
 

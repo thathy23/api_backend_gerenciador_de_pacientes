@@ -25,8 +25,9 @@ public class PacienteServiceImpl implements PacienteService {
         paciente.setSexo(criarPacienteRequest.sexo());
         paciente.setTelefone(criarPacienteRequest.telefone());
         paciente.setTipoPacienteEnum(criarPacienteRequest.tipoPaciente());
-        paciente.setPlano_de_saude(criarPacienteRequest.plano_de_saude());
+        paciente.setPlanoDeSaude(criarPacienteRequest.planoDeSaude());
         paciente.setCriadoEm(LocalDateTime.now());
+
 
         Paciente pacienteCriado = pacienteRepository.save(paciente);
 

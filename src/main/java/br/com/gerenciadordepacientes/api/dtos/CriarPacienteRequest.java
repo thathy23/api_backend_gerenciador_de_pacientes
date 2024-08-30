@@ -10,7 +10,7 @@ public record CriarPacienteRequest(
         String sexo,
         String cpf,
         String rg,
-        String plano_de_saude,
+        String planoDeSaude,
         TipoPacienteEnum tipoPaciente
 ) {
 }

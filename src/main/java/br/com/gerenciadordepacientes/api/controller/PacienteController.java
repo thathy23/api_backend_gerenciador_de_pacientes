@@ -18,6 +18,12 @@ public class PacienteController {
     @ResponseStatus(HttpStatus.CREATED)
     public PacienteCriadoResponse criarPaciente(@RequestBody CriarPacienteRequest criarPacienteRequest){
      return pacienteService.criarPaciente(criarPacienteRequest);
-
     }
+//      criar uma lista de pacientes:
+//      @PostMapping("/lista")
+//      @ResponseStatus(HttpStatus.CREATED)
+//      public PacienteCriadoResponse criarPaciente(@RequestBody CriarPacienteRequest criarPacienteRequest){
+//       return pacienteService.criarPaciente(criarPacienteRequest);
+//    }
+
 }
